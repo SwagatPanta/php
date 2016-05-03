@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title>ajax</title>
+	<script src="asset/jquery-2.2.3.min.js"></script>
+	<script>
+
+  var xhr = new xmlHttpRequest();//1
+  xhr.onreadystatechange = function(){//2
+
+  	if(xhr.readyState==4){
+
+  		document.getElementById('ajax').innerHtml=xhr.responseText;
+  	}
+
+  };
+
+  xhr.open('GET','sidebar.html');//3
+  xhr.send();//4
+
+	  //crrl+a....edit->line->reindent
+
+	</script>
+
+
+
+</head>
+<body>
+
+	<p>hello index</p>
+
+	<div id="ajax">
+
+	</div>
+
+</body>
+</html>
